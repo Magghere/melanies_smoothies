@@ -49,7 +49,8 @@ if ingredients_list:
 # #     # st.stop()
     import requests
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-    st.text(fruityvice_response.json())
+    # st.text(fruityvice_response.json())
+    fv.df = st.dataframe(data = fruityvice_response.json(), use_container_width =True)
 
     time_to_insert = st.button('Submit Order')
 
